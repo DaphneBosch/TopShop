@@ -1,0 +1,304 @@
+body {
+  font-family: Arial;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: grey;
+  color: white;
+  color: white;
+  font-size: 3.0rem;
+  margin-left: 45.5%;
+  margin-top: 5%;
+}
+
+.icon:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=9);
+  color: white;
+}
+
+.user {
+  font-size: 15px;
+  justify-content: center;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+li:hover {
+  background: lightsteelblue;
+  opacity: 0.8;
+  filter: alpha(opacity=8);
+}
+
+.logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.content {
+  float: none;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: 1.0rem;
+}
+
+#page_title {
+  margin: 10px;
+  padding: 0;
+  padding-top: 5%;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+#note {
+  color: red;
+  font-weight: bolder;
+  font-size: 1.0rem;
+}
+
+form {
+  width: 50%;
+}
+
+input {
+  float: none;
+  height: 25px;
+  width: 100%;
+  border: none;
+  display: block;
+  color: rgb(33,33,33);
+  background-color: lightsteelblue;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  text-align: center;
+  font-size: 1.0rem;
+}
+
+.styleform {
+  background-color: lightsteelblue;
+  height: 25px;
+  margin-top: 5%;
+  padding: 0;
+}
+
+.loginform {
+  width: 30%;
+}
+
+a {
+  color: #000;
+}
+
+h5 {
+  color: black;
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  padding: 3%;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: static;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/* dropdown */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropbtn:hover {
+  background-color: lightsteelblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
